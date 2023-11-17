@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private TextView textView;
     private Button button2;
+    private Button buttonReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 textView.setTextColor(Color.BLUE);
+            }
+        });
+
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                textView.setTextColor(Color.BLACK);
+                textView.setText("Hello Word!");
             }
         });
     }
